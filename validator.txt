@@ -1,0 +1,38 @@
+db.createCollection( "HealthCare",
+   { validator: { $or:
+      [
+         { Name: { $type: "string" } },
+         { _Name: { [$type: "string", $type: "string"] } },
+         { Surname: { $type: "string" } },
+         { _Surname: { [$type: "string", $type: "string"] } },
+         { AFM: { $type: "double" } },
+         { _AFM: { [$type: "string", $type: "string"] } },
+         { Illness: { $type: "array" } }
+         { _Illness: { [$type: "string", $type: "string"] } }
+      ]
+   }
+} )
+
+
+db.BasicInfo.insertOne( {
+          "Name": { "Manolis" } ,
+          _Name: { ["g543h3542tg","NoLee"] },
+          Surname: { "Pentarakis" } ,
+          _Surname: { ["dhgf6&&dhefh","NoLee"] },
+          AFM: { 154872145721} ,
+          _AFM: { ["hjg7*^TbGHUTr6k", "NoLee"] },
+          Illness: { ["Pneumonia", "AIDS"] } ,
+          _Illness: { [["hg&*g&*","NoLee"],["jasdhajk^&", "NoLee"]] } 
+})
+
+
+db.BasicInfo.insertOne( {
+          Name:  "Manolis" ,
+          _Name:  ["g543h3542tg","NoLee"] ,
+          Surname:  "Pentarakis"  ,
+          _Surname:  ["dhgf6&&dhefh","NoLee"] ,
+          AFM:  154872145721 ,
+          _AFM:  ["hjg7*^TbGHUTr6k", "NoLee"] ,
+          Illness:  ["Pneumonia", "AIDS"]  ,
+          _Illness:  [["hg&*g&*","NoLee"],["jasdhajk^&", "NoLee"]]  
+})
