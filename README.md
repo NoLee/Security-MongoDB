@@ -1,5 +1,6 @@
 # Security mechanisms and data protection services in non-relational databases
 ## A systematic review of effective ways of preserving privacy in Data Structures using the NoSQL database MongoDB.
+### Authors: Manolis Pentarakis
 
 The purpose of this dissertation is to research and showcase all the different security mechanisms and services an IT system must implement to be considered secure. Security mechanisms that were studied include protection from data loss, corruption and theft, protection from illegal and unwanted access of third parties to personal and sensitive data, conserving non-repudiation in the digital environment.
 
